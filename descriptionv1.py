@@ -5,7 +5,7 @@ client = OpenAI()
 
 def get_hint(level):
     """Generate a descriptive hint for a random object using OpenAI."""
-    difficulty = "very easy" if level <= 3 else "easy" if level <= 7 else "moderate"
+    difficulty = "very easy" if level <= 4 else "easy" if level <= 7 else "moderate"
     completion = client.chat.completions.create(
         model="gpt-4o-mini",
         messages=[
